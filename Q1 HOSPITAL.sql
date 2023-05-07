@@ -19,16 +19,6 @@ INSERT INTO Doctors_Table VALUES(101,"RAMESH","PHYSCODYNAMIC THERAPHY"),
 (105,"RISHI","HUMANISTIC THERAPHY");
 
 
---                                                                   Doctor_Table
-
---	                                                  Doctor_id   Doctor_Name     Doctor_SpecialiZation
--- 														101			RAMESH			PHYSCODYNAMIC THERAPHY
--- 														102			SURESH			INTERPERSONAL THERAPHY
--- 														103			ANSIH			SUPPORTIVE THERAPHY
--- 														104			NITHIN			DIALECTICAL BEHAVIOUR THERAPHY
--- 														105			RISHI			HUMANISTIC THERAPHY
-
-
 -- creating PATIENTS TABLE with attributes id,name,age,gender
 CREATE TABLE Patients_Table(
 Patient_id int PRIMARY KEY NOT NULL,
@@ -43,15 +33,6 @@ SELECT * FROM Patients_Table;
 INSERT INTO Patients_Table VALUES(201,"KISHAN",21,"MALE"),(202,"SEEMA",23,"FEMALE"),
 (203,"MOHAN",32,"MALE"),(204,"RAJU",16,"MALE"),(205,"KAMAL",20,"MALE");
 
-
---                                                                   				Patient_Table
-
--- 																Patient_id  Patient_Name  Patient_Age  Patient_Gender
--- 								                                 201		KISHAN			21		 	MALE
---                                                               202		SEEMA			23			FEMALE
---                                                               203		MOHAN			32			MALE
---                                                               204		RAJU			16			MALE
---                                                               205		KAMAL			20			MALE
 
 -- creating  APPOINTMENTS TABLE by using Doctor_Table,Patient_Table with their id,date_time 
 -- providing a connection among the tables using FOREIGN KEY
@@ -76,16 +57,6 @@ INSERT INTO Appointment_Table VALUES(1,201,103,"2030-05-02 11:30:20"),
 (5,205,105,"2030-05-05 8:12:40");
 
 
---                                                                   Appointment_Table
-
---                                                  Appoint_id  Patient_id  Doctor_id  		Date_Time
---                                                       1	 		201			103		2030-05-02 11:30:20
---                                                       2			203			102		2030-05-03 12:30:20
---                                                       3			203			101		2030-05-03 09:30:20
---                                                       4			205			105		2030-05-02 11:30:20
---                                                       5			205			105		2030-05-05 08:12:40
-
-
 -- creating REVIEWS TABLE using Patient_id and Review attributes
 CREATE TABLE Review_Table (
 Patient_id int NOT NULL,
@@ -97,15 +68,6 @@ SELECT * FROM Review_Table;
 
 -- Inserting Data into the table
 INSERT INTO Review_Table values(201,"Good"),(203,"Not Satisfied"),(204,"Satisfied"),(202,"Good");
-
-
---                                                             Review_Table
-
---                                                        Patient_id 	Feedback
---                                                            201			Good
---                                                            203			Not Satisfied
---                                                            204			Satisfied
---                                                            202			Good
 
 
 -- QUERY BASED ON ABOVE Tables
